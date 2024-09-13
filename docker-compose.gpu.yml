@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/Dockerfile.gpu
+    platform: linux/amd64
     tty: true
     volumes:
       - ./data/:/app/data
