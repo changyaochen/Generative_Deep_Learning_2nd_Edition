@@ -1,3 +1,5 @@
+import os
+
 import matplotlib.pyplot as plt
 
 
@@ -27,6 +29,7 @@ def display(
         plt.axis("off")
 
     if save_to:
+        os.makedirs(os.path.dirname(save_to), exist_ok=True)
         plt.savefig(save_to)
         print(f"\nSaved to {save_to}")
 
